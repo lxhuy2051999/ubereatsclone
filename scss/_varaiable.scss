@@ -1,0 +1,29 @@
+$sizes:(
+    xxl: 48px,
+    xl : 36px,
+    lg : 28px,
+    md : 24px,
+    sm : 18px,
+    xs : 14px,
+    xxs: 8px
+);
+
+@function size($size){
+    @return map-get($sizes, $size );
+}
+
+
+$colors:(
+    green: #06C167,
+    lightGreen: #E6F2ED,
+    black: #0b0e0f,
+    darkGray: #1A1A1A,
+    white: #ffffff,
+    lightGray: #F0F0F0,
+    gray: #EDEDED
+);
+
+@function color($colorName)
+{
+    @return map-get($colors, $colorName );
+}

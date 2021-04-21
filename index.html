@@ -1,0 +1,798 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.css">
+    <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/3566/3566523.svg">
+    <title>UBER EATS CLONE</title>
+</head>
+<body>
+    <!--Header-->
+    <header class="header">
+        <input type="checkbox" hidden class="column-menu-checkbox" id="column-menu-checkbox">
+        <label for="column-menu-checkbox" class="column-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="column-menu">
+            <button class="sign-in-button">Sign in</button>
+            <ul class="nav-link-list">
+                <li class="nav-link">Create a business account</li>
+                <li class="nav-link">Add your restaurant</li>
+                <li class="nav-link">Sign up to deliver</li>
+            </ul>
+            <div class="introduce-app">
+                <div class="menu-intro">
+                    <img src="image/uber-eats-icon.png" class="uber-eats-img">
+                    <p>There's more to love in the app.</p>
+                </div>
+                <div class="download-button-wrapper">
+                    <button class="download-button">
+                        <img src="image/apple.svg" class="download-img" >
+                        Iphone
+                    </button>
+                    <button class="download-button">
+                        <img src="image/android-logo.svg" class="download-img">
+                        Android
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo">
+            <p class="logo-text">
+                <span>Uber</span>
+                <span>Eats</span>
+            </p>
+        </div>
+
+        <nav class="sign-in-nav">
+            <a href="" class="sign-in-link">Sign in</a>
+        </nav>
+    </header>
+
+    <!--End of header-->
+
+    <!--page cover-->
+    <section class="page-cover">
+        <form action="#" class="food-finding-form">
+            <h1 class="invitation">
+                <em> Hungry?</em> You're in the <strong>right place</strong>
+            </h1>
+            <div class="address-input-wrapper">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" class="address-input" placeholder="Enter delivery address">
+            </div>
+            <div class="time-delivery-select-wrapper">
+                <input type="checkbox" id="custom-select-checkbox" hidden>
+                <div class="custom-select">
+                    <label class="select" for="custom-select-checkbox">
+                        <i class="fas fa-clock"></i> <span>Delivery Now</span> 
+                    </label>
+                    <div class="option-group">
+                        <label class="option" for="custom-select-checkbox">
+                            <i class="fas fa-clock"></i> Deliver now                  
+                        </label>
+                        <label class="option" for="custom-select-checkbox">
+                            <i class="fas fa-calendar"></i> Schedule for later    
+                        </label>
+                    </div>
+                </div>
+                <span class="custom-arrow">
+                    <i class="fas fa-angle-down"></i>
+                </span>              
+            </div>
+            <button class="find-food-button">Find Food</button>
+            <p class="invite-sign-in">
+                <a href="#">Sign in</a> for your recent address
+            </p>
+        </form>
+    </section>
+    <!--end of page cover-->
+
+    <!--gallery-->
+    <div id="food-near-me-slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        
+        <p class="slider-caption">Food near me</p>
+
+        <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+         </div>
+
+        <div id="slides">
+           <div id="overflow">
+              <div class="inner">
+                 <div class="slide slide_1">
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/fast-food.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Fast Food</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/dessert.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Dessert</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="/image/sandwich.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Sandwich</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/pizza.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Pizza</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/korean.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Korean</p>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="slide slide_2">
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/mexican-food.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Mexican</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/ice-cream.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Ice Cream</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="/image/vietnamese.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>vietnamese</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/chinese.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Chinese</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/BBQ.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>BBQ</p>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="slide slide_3">
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/coffee.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Coffee</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/salad.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Salad</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="/image/korean.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Korean</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/sandwich.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Sandwich</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/italian.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Italian</p>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="slide slide_4">
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/bubble-tea.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Bubble Tea</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/dessert.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Dessert</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="/image/ice-cream.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Ice Cream</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/pizza.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>Pizza</p>
+                            </div>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="food-img">
+                                <img src="image/American.jpg" alt="">
+                            </div>
+                            <div class="food-name">
+                                <p>American</p>
+                            </div>
+                        </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+    <!--end of gallery-->
+
+    <!--Download app-->
+    <section class="download-uber-eats-app">
+        <div class="uber-eats-logo-wrapper">
+            <img src="/image/uber-icon.png" alt="">
+        </div>
+        <p>There's more to love in the app.</p>
+        <div class="download-buttons">
+            <button class="download-button">
+                <img src="image/apple.svg" class="download-img" >
+                Iphone
+            </button>
+            <button class="download-button">
+                <img src="image/android-logo.svg" class="download-img">
+                Android
+            </button>
+        </div>
+
+    </section>
+    <!--end of Download app-->
+
+    <!--local food-->
+    <section class="local-food">
+        <input type="radio" name="local-food-page-control" id="page-1-button" class="page-1-button">
+        <input type="radio" name="local-food-page-control" id="page-2-button" class="page-2-button">
+        <div class="local-food-caption">
+            <p>Food Delivery in Seattle</p>
+        </div>
+        <div class="controls">
+            <label for="page-1-button">
+                <img src="/image/left-arrow.svg" alt="">
+            </label>
+            <label for="page-2-button">
+                <img src="/image/right-arrow.svg" alt="">
+            </label>
+        </div>
+        <div class="slides">
+            <div class="overflow">
+                <div class="inner">
+                    <div class="page page-1">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/starbucks.jpg" alt="">
+                            </div>
+                            <p class="name">Starbucks (Lower Queen Anne)</p>
+                            <p class="price">$4.99 Delivery Fee • 20–30 Min • $</p>
+                            <p class="rate">4.8</p>
+                            <p class="tags">Cafe • Coffee & Tea • Breakfast and Brunch • Bakery</p>
+                            <p class="discount">$0 Delivery Fee (Spend $15)</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/mcdonalds-burger-fries-soda.jpg" alt="">
+                            </div>
+                            <p class="name">McDonald's (Seattle Center)</p>
+                            <p class="price">$3.99 Delivery Fee • 10–20 Min • $</p>
+                            <p class="rate">4.7</p>
+                            <p class="tags">American • Fast Food • Burgers</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/mexican-griiled.jpg" alt="">
+                            </div>
+                            <p class="name">Chipotle Mexican Grill (212 Westlake Ave N)</p>
+                            <p class="price">$4.99 Delivery Fee • 20–30 Min • $</p>
+                            <p class="rate">4.4</p>
+                            <p class="tags">Healthy • Mexican</p>
+                            <p class="discount">$0 Delivery Fee (Spend $1)</p>
+                        </div>
+                    </div>
+                    <div class="page page-2">
+                        <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="image/shakeshack.png" alt="">
+                        </div>
+                            <p class="name">Shake Shack (2115 Westlake Avenue)</p>
+                            <p class="price">$4.99 Delivery Fee • 30–40 Min • $</p>
+                            <p class="rate">4.7</p>
+                            <p class="tags">American • Burgers</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/tacobell.jfif" alt="">
+                            </div>
+                            <p class="name">Taco Bell (1110 North 90th Street)</p>
+                            <p class="price">$4.99 Delivery Fee • 30–40 Min • $</p>
+                            <p class="rate">4.6</p>
+                            <p class="tags">Burritos • Fast Food • Mexican</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/panda-express.jpg" alt="">
+                            </div>
+                            <p class="name">Panda Express (12513 Lake City Way)</p>
+                            <p class="price">$4.99 Delivery Fee • 35–45 Min • $$</p>
+                            <p class="rate">4.6</p>
+                            <p class="tags">Chinese • Family Meals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of local food-->
+    
+    <!--register-->
+    <section class="register">
+        <div class="card-wrapper">
+            <div class="card-img">
+                <img src="image/employee-eat.jpg" alt="">
+            </div>
+            <p class="service-name">Feed your employees</p>
+            <a class="register-action">Create a business account</a>
+        </div>
+        <div class="card-wrapper">
+            <div class="card-img">
+                <img src="image/cooking.jfif" alt="">
+            </div>
+            <p class="service-name">Your restaurant, delivered</p>
+            <a class="register-action">Add your restaurant</a>
+        </div>
+        <div class="card-wrapper">
+            <div class="card-img">
+                <img src="image/shipping-food.jfif" alt="">
+            </div>
+            <p class="service-name">Deliver the Eats</p>
+            <a class="register-action">Sign up to deliver</a>
+        </div>
+    </section>
+    <!--end of register-->
+
+    <!--new on uber eats-->
+    <section class="new-on-uber">
+        <input type="radio" name="new-on-uber-page-control" id="new-on-uber-page-1-button" class="new-on-uber-page-1-button">
+        <input type="radio" name="new-on-uber-page-control" id="new-on-uber-page-2-button" class="new-on-uber-page-2-button">
+        <div class="new-on-uber-caption">
+            <p>New on Uber Eats</p>
+        </div>
+        <div class="controls">
+            <label for="new-on-uber-page-1-button">
+                <img src="/image/left-arrow.svg" alt="">
+            </label>
+            <label for="new-on-uber-page-2-button">
+                <img src="/image/right-arrow.svg" alt="">
+            </label>
+        </div>
+        <div class="slides">
+            <div class="overflow">
+                <div class="inner">
+                    <div class="page page-1">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/man-vs-fries.jpg" alt="">
+                            </div>
+                            <p class="name">Man vs Fries (SEA08-1)</p>
+                            <p class="price">$0.99 Delivery Fee • 45–55 Min • $</p>
+                            <p class="rate">New</p>
+                            <p class="tags">Chicken • Mexican • Desserts • Fast Food</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/bbq-chicken.jpeg" alt="">
+                            </div>
+                            <p class="name">bbq Chicken - UW, WA</p>
+                            <p class="price">$0.99 Delivery Fee • 40–50 Min • $</p>
+                            <p class="rate">New</p>
+                            <p class="tags">Korean • Asian • BBQ</p>
+                            <p class="discount">Spend $15, Save $3</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/Carnitas-Michoacan.jpg" alt="">
+                            </div>
+                            <p class="name">Carnitas Michoacan</p>
+                            <p class="price">$1.99 Delivery Fee • 35–45 Min • $</p>
+                            <p class="rate">New</p>
+                            <p class="tags">Mexican • Latin American • New Mexican</p>
+                        </div>
+                    </div>
+                    <div class="page page-2">
+                        <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="image/Rookies-Sports-Bar-&-Grill.jpg" alt="">
+                        </div>
+                            <p class="name">Rookies Sports Bar & Grill</p>
+                            <p class="price">$1.99 Delivery Fee • 40–50 Min • </p>
+                            <p class="rate">New</p>
+                            <p class="tags">Burgers • American • Sandwiches</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/The-Salty-Shack.jpg" alt="">
+                            </div>
+                            <p class="name">The Salty Shack @ The Octopus Bar</p>
+                            <p class="price">$0 Delivery Fee • 30–40 Min • </p>
+                            <p class="rate">New</p>
+                            <p class="tags">American • Burgers • Sandwiches</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/crawfish.jpg" alt="">
+                            </div>
+                            <p class="name">The Cajun Crawfish</p>
+                            <p class="price">$3.99 Delivery Fee • 45–55 Min • </p>
+                            <p class="rate">New</p>
+                            <p class="tags">Cajun • Seafood</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of new on uber-->
+
+    <!--cities Near Me-->
+    <section class="cities-near-me">
+        <div class="cities-near-me-header">
+            <p class="cities-near-me-caption">Cities Near Me</p>
+            <a class="more-cities">View all 500+ cities</a>
+        </div>
+            
+        <div class="cities">
+            <a id="city" href="">Alanta</a>
+            <a id="city" href="">Dallas-Fort Worth</a>
+            <a id="city" href="">New York City</a>
+            <a id="city" href="">Sacramento</a>
+            <a id="city" href="">Austin</a>
+            <a id="city" href="">Denver</a>
+            <a id="city" href="">Orange County</a>
+            <a id="city" href="">San Diego</a>
+            <a id="city" href="">Baltimore-Maryland</a>
+            <a id="city" href="">Las Vegas</a>
+            <a id="city" href="">Palm Springs</a>
+            <a id="city" href="">San Francisco Bay Area</a>
+            <a id="city" href="">Boston</a>
+            <a id="city" href="">Los Angeles</a>
+            <a id="city" href="">Philadelphia</a>
+            <a id="city" href="">Seattle</a>
+            <a id="city" href="">Charlotte</a>
+            <a id="city" href="">Miami</a>
+            <a id="city" href="">Phoenix</a>
+            <a id="city" href="">Tampa Bay</a>
+            <a id="city" href="">Chicago</a>
+            <a id="city" href="">Minneapolis - St. Paul</a>
+            <a id="city" href="">Portland</a>
+            <a id="city" href="">Washington D.C.</a>
+        </div>
+    </section>
+    <!--cities Near Me-->
+    
+    <!--pizza in Seattle-->
+    <section class="pizza-in-seattle">
+        <input type="radio" name="pizza-in-seattle-page-control" id="pizza-in-seattle-page-1-button" class="pizza-in-seattle-page-1-button">
+        <input type="radio" name="pizza-in-seattle-page-control" id="pizza-in-seattle-page-2-button" class="pizza-in-seattle-page-2-button">
+        <div class="pizza-in-seattle-caption">
+            <p>Pizza Delivery in Seattle</p>
+        </div>
+        <div class="controls">
+            <label for="pizza-in-seattle-page-1-button">
+                <img src="/image/left-arrow.svg" alt="">
+            </label>
+            <label for="pizza-in-seattle-page-2-button">
+                <img src="/image/right-arrow.svg" alt="">
+            </label>
+        </div>
+        <div class="slides">
+            <div class="overflow">
+                <div class="inner">
+                    <div class="page page-1">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/mod-pizza.png" alt="">
+                            </div>
+                            <p class="name">MOD Pizza (West Seattle)</p>
+                            <p class="price">$4.49 Delivery Fee • $</p>
+                            <p class="rate">4.7</p>
+                            <p class="tags">Pizza • Desserts • Salads • American • Healthy • Vegetarian Friendly</p>
+                            <p class="discount">$0 Delivery Fee</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/pizza-hut.jfif" alt="">
+                            </div>
+                            <p class="name">Pizza Hut (1517 SW 104th St)</p>
+                            <p class="price">$0.49 Delivery Fee • $</p>
+                            <p class="rate">4.4</p>
+                            <p class="tags">Fast Food • Italian • pizza • wings • Family Meals</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/Pegasus-Pizza.jpg" alt="">
+                            </div>
+                            <p class="name">Pegasus Pizza</p>
+                            <p class="price">$1.49 Delivery Fee • $</p>
+                            <p class="rate">4.7</p>
+                            <p class="tags">Italian • Pizza</p>
+                        </div>
+                    </div>
+                    <div class="page page-2">
+                        <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="image/Paranormal-Pie.jpg" alt="">
+                        </div>
+                            <p class="name">Paranormal Pie</p>
+                            <p class="price">$3.49 Delivery Fee • $$</p>
+                            <p class="rate">4.7</p>
+                            <p class="tags">Halal</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/Pizza-Palace.jpg" alt="">
+                            </div>
+                            <p class="name">Pizza Palace</p>
+                            <p class="price">$3.49 Delivery Fee • $</p>
+                            <p class="rate">4.6</p>
+                            <p class="tags">Italian • Vegetarian Friendly • Salads • Pizza • Healthy</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/domino-pizza.jpg" alt="">
+                            </div>
+                            <p class="name">Domino's Pizza</p>
+                            <p class="price">$1.49 Delivery Fee • $</p>
+                            <p class="rate">4.7</p>
+                            <p class="tags">Pizza</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of pizza in Seattle-->
+
+    <!--fast-food-in-seattle-->
+    <section class="fast-food-in-seattle">
+        <input type="radio" name="fast-food-in-seattle-page-control" id="fast-food-in-seattle-page-1-button" class="fast-food-in-seattle-page-1-button">
+        <input type="radio" name="fast-food-in-seattle-page-control" id="fast-food-in-seattle-page-2-button" class="fast-food-in-seattle-page-2-button">
+        <div class="fast-food-in-seattle-caption">
+            <p>Fast Food Delivery in Seattle</p>
+        </div>
+        <div class="controls">
+            <label for="fast-food-in-seattle-page-1-button">
+                <img src="/image/left-arrow.svg" alt="">
+            </label>
+            <label for="fast-food-in-seattle-page-2-button">
+                <img src="/image/right-arrow.svg" alt="">
+            </label>
+        </div>
+        <div class="slides">
+            <div class="overflow">
+                <div class="inner">
+                    <div class="page page-1">
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="image/mcdonalds-burger-fries-soda.jpg" alt="">
+                            </div>
+                            <p class="name">McDonald's® (Seattle-White Ct)</p>
+                            <p class="price">$2.49 Delivery Fee • $</p>
+                            <p class="rate">4.5</p>
+                            <p class="tags">American • Fast Food • Burgers</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="http://prod.static9.net.au/_/media/2018/07/03/11/02/kfc-fin-cut.jpg" alt="">
+                            </div>
+                            <p class="name">KFC (10050 16th Ave. SW)</p>
+                            <p class="price">$1.49 Delivery Fee • $</p>
+                            <p class="rate">4.6</p>
+                            <p class="tags">American • Fast Food • wings • Family Meals • Family Friendly</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2019/09/0/0/Wendys_Breakfast.jpg?ve=1&tl=1" alt="">
+                            </div>
+                            <p class="name">Wendy's (15700 1St Ave. S.)</p>
+                            <p class="price">$4.49 Delivery Fee • $</p>
+                            <p class="rate">4.4</p>
+                            <p class="tags">American • Burgers • Fast Food</p>
+                        </div>
+                    </div>
+                    <div class="page page-2">
+                        <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="https://i0.wp.com/tastyislandhawaii.com/wp-content/uploads/jitb_food_truck_series_feat.jpg?fit=800%2C445" alt="">
+                        </div>
+                            <p class="name">Jack in the Box (8407) 1127 SW 128th St</p>
+                            <p class="price">$3.49 Delivery Fee • $</p>
+                            <p class="rate">4.3</p>
+                            <p class="tags">American • burger • Fast Food</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="https://sm.mashable.com/t/mashable_sea/photo/default/taco-bell_rx11.910.png" alt="">
+                            </div>
+                            <p class="name">Taco Bell (10711 16th Ave SW)</p>
+                            <p class="price">$2.49 Delivery Fee • $</p>
+                            <p class="rate">4.5</p>
+                            <p class="tags">Burritos • Fast Food • Mexican</p>
+                        </div>
+                        <div class="card-wrapper">
+                            <div class="card-img">
+                                <img src="http://www.lottefoods.co.kr/eng/images/business/bs_meat_imgbox.jpg" alt="">
+                            </div>
+                            <p class="name">Lotte (Somewhere)</p>
+                            <p class="price">$1.49 Delivery Fee • $</p>
+                            <p class="rate">4.7</p>
+                            <p class="tags">Korean edible things</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of fast-food-in-seattle-->
+
+    <!--countries-->
+    <section class="countries-with-uber-eats">
+        <div class="countries-with-uber-eats-header">
+            <p class="countries-with-uber-eats-caption">Cities Near Me</p>
+        </div>
+            
+        <div class="countries">
+            <a id="country" href="">United States</a>
+            <a id="country" href="">Canada</a>
+            <a id="country" href="">Chile</a>
+            <a id="country" href="">Belgium</a>
+            <a id="country" href="">Spain</a>
+            <a id="country" href="">Australia</a>
+            <a id="country" href="">Switzerland</a>
+            <a id="country" href="">Ecuador</a>
+            <a id="country" href="">Brazil</a>
+            <a id="country" href="">Poland</a>
+            <a id="country" href="">New Zealand</a>
+            <a id="country" href="">Ireland</a>
+            <a id="country" href="">Mexico</a>
+            <a id="country" href="">United Kingdom</a>
+            <a id="country" href="">Colombia</a>
+            <a id="country" href="">Argentina</a>
+            <a id="country" href="">France</a>
+            <a id="country" href="">Portugal</a>
+            <a id="country" href="">Taiwan (ROC)</a>
+            <a id="country" href="">Sweden</a>
+            <a id="country" href="">Japan</a>
+            <a id="country" href="">Italy</a>
+            <a id="country" href="">South Africa</a>
+            <a id="country" href="">Guatemala</a>
+        </div>
+    </section>
+    <!--end of countries-->
+
+
+    <footer class="footer">
+        <div class="upper">
+            <div class="uber-eats-footer">
+                <div class="logo">
+                    <span class="logo-text">Uber</span>
+                    <span class="logo-text">Eats</span>
+                </div>
+    
+                <div class="download-app">
+                    <div class="app-store">
+                        <img src="http://www.cscr.com/UserFiles/image/appStore.png" alt="">
+                    </div>
+                    <div class="google-play">
+                        <img src="https://mobicargame.files.wordpress.com/2015/12/get-it-on-google-play.png" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="about">
+                <div class="about-header">About Uber Eats</div>
+                <div class="about-uber-eats">
+                    <a>Read out blog</a>
+                    <a>Buy gift cards</a>
+                    <a>Create a business account</a>
+                    <a>Add your restaurant</a>
+                    <a>Sign up to deliver</a>
+                </div>
+            </div>
+    
+            <div class="get-help">
+                <div class="get-help-header">Get Help</div>
+                <div class="get-help-action">
+                    <a>Read FAQs</a>
+                    <a>View all cities</a>
+                    <a>View all countries</a>
+                    <a>Restaurant near me</a>
+                    <a>Language</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lower">
+            <div class="social-media">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="other">
+                <p>Private Policy</p>
+                <p>Term</p>
+                <p>Pricing</p>
+                <p>Do not sell my info (California)</p>
+            </div>
+            <div class="clone">Convert from rice to code by Huy Xuon Lieu</div>
+        </div>
+    </footer>
+</body>
+</html>

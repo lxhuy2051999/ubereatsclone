@@ -1,0 +1,854 @@
+@import "varaiable";
+@import "mixins";
+
+body{
+    position: relative;
+}
+
+button{
+    cursor: pointer;
+}
+
+input, select, button{
+    border-radius: .2rem;
+}
+
+*{
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.header{
+    background-color: color(white);
+    position: fixed;
+    width: 100%;
+    height: 8rem;
+    top: 0px;
+    z-index: 100;
+    
+    .logo-text{
+        font-size: size(lg);
+        font-weight: 700;
+        white-space: nowrap;
+
+        span:nth-child(2){
+            color: color(green);
+        }
+    }
+
+    .sign-in-nav{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-self: right;
+        height: 4rem;
+        width: 70%;
+        border-radius: 3rem;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        .sign-in-link{
+            text-decoration: none;
+            font-weight: 400;
+            font-size: size(sm);
+            color: color(black);
+            white-space: nowrap;
+        }
+    }
+
+
+    .column-menu-icon{
+        cursor: pointer;
+        span{
+            display: block;
+            height: .2rem;
+            width: 2rem;
+            background-color: black;
+            margin: .5rem;
+            transform-origin: left;
+            transition: all .25s ease-in-out .1s;
+        }
+    }
+
+    .column-menu{
+        position: absolute;
+        top: 8rem;
+        left: calc(-20rem - 10vw);
+        display: flex;
+        flex-direction: column;
+        background-color: color(white);
+        height: 100vh;
+        width: calc(20rem + 5vw);
+        z-index: 10;
+        transition: all .5s ease-in-out;
+        z-index: 10;
+
+
+
+        .sign-in-button{
+            margin: 2rem;
+            height: 4rem;
+            background-color: color(black);
+            border: none;
+            color: color(white);
+            font-size: size(sm);
+        }
+
+        .nav-link-list{
+            margin: 2rem;
+            margin-top: calc(2rem + 20vh);
+            list-style: none;
+            font-size: size(xs);
+
+            .nav-link{
+                margin-top: 1.5rem;
+                cursor: pointer;
+            }
+        }
+
+        .menu-intro{
+            margin: 2rem;
+            display: flex;
+            align-items: center;
+
+            .uber-eats-img{
+                height: 5rem;
+                width: 5rem;
+                border: .2rem solid color(black);
+            }
+
+            p{
+                margin-left: 2rem;
+                font-size: size(xs);
+            }
+        }
+
+        .download-button-wrapper{
+            margin: 2rem;
+            height: 3rem;
+            width: 100%;
+
+
+            .download-button{
+                border-radius: 2rem;
+                height: 4rem;
+                width: 10rem;
+                border: none;
+                margin-right: .5rem;
+                outline: none;
+
+
+                .download-img{
+                    height: 1.5rem;
+                    width: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .column-menu-checkbox:checked ~ .column-menu{
+        left: 0%;
+    }
+
+    .column-menu-checkbox:checked ~ .column-menu-icon span:nth-child(1){
+        transform: rotateZ(45deg);
+    }
+    .column-menu-checkbox:checked ~ .column-menu-icon span:nth-child(2){
+        opacity: 0;
+    }
+    .column-menu-checkbox:checked ~ .column-menu-icon span:nth-child(3){
+        transform: rotateZ(-45deg);
+    }
+
+}
+
+
+.page-cover{
+    height: 70rem;
+    background-color: rgba(240, 180, 68, 0.5);
+    background:rgba(240, 180, 68, 0.5);
+    background-image:linear-gradient(rgba(color(darkGray), 0.2), rgba(color(darkGray), 0.5)), url(../image/uber-eats-background.jpg);
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    
+    .food-finding-form{
+        color: color(white);
+        position: relative;
+
+        .invitation{
+            font-size: size(xxl);
+            margin-bottom: 5rem;
+
+            *{
+                font-style: normal;
+                font-weight: 700;
+            }
+        }
+
+        .address-input-wrapper{
+            position: absolute;
+            display: grid;
+            margin-right: .5rem;
+            z-index: 1;
+            height: 100%;
+            width: calc(100% - 0.5rem);
+
+            i{
+                position: absolute;
+                font-size: size(sm);
+                color: color(black);
+                align-self: center;
+                left: 1rem;
+                z-index: 2;
+            }
+            .address-input{
+                width: 100%;
+                height: 100%;
+                padding-left: 5rem;
+                padding-right: 2rem;
+                border: none;
+                border-bottom: .1rem solid color(black);
+                outline:none;
+                border-radius: .2rem;
+                z-index: inherit;
+            }
+
+        }
+
+        .time-delivery-select-wrapper{
+            margin-right: .5rem;
+            position: relative;
+
+            .custom-select{
+                height: 100%;
+                width: 100%;
+                border: none;
+                outline: none;
+                position: relative;
+                color: color(black);
+                font-size: size(sm);
+
+                .select{
+                    height: 100%;
+                    width: 100%;
+                    background-color: color(white);
+                    display: grid;
+                    padding-left: 1rem ;
+                    align-items: center;
+                    border-radius: .2rem;
+                    display: flex;
+                    align-items: center;
+
+                    i{
+                        margin-right: 1rem;
+                    }
+                }
+
+                .option-group{
+                    position: absolute;
+                    height: 200%;
+                    width: 100%;
+                    background-color: color(white);
+                    z-index: -1;
+                    border-radius: .2rem;
+
+                    .option{
+                        height: 50%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        font-weight: 500;
+
+                        i{
+                            padding:.5rem;
+                            border-radius: 50%;
+                            background-color: color(white);
+                            margin: .5rem;
+                        }
+
+                        &:hover{
+                            background-color: color(gray);
+                        }
+                    }
+                }
+
+            }
+
+            #custom-select-checkbox:checked ~ .custom-select .option-group{
+                z-index: 1;
+            }
+
+            #custom-select-checkbox:checked ~ .custom-select .select,
+            #custom-select-checkbox:checked ~ .custom-arrow{
+                border-bottom: .2rem solid color(black);
+                height: calc(100% + .2rem);
+            }
+
+            .custom-arrow{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 4rem;
+                background-color: color(white);
+                pointer-events: none;
+                border-radius: .2rem;
+
+                i{
+                    color: color(black);
+                    font-size: size(xs);
+                }
+            }
+        }
+
+        .find-food-button{
+            border: none;
+            outline: none;
+            font-weight: 500;
+            background-color: color(black);
+            color: color(white );
+            font-size: size(sm);
+
+            &:hover{
+                background-color: color(darkGray);
+            }
+        }
+
+    }
+
+    .invite-sign-in{
+        color: color(white);
+        font-size: size(sm);
+        margin-top: 2rem;
+        font-weight: 600;
+        a{
+            color: color(white);
+        }
+    }
+
+}
+
+
+#food-near-me-slider{
+    width: 100%;
+
+    input[type = "radio"]{
+        display: none;
+    }
+
+    label{
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #slides{
+        position: relative;
+        z-index: 1;
+
+        .inner{
+            width: 400%;
+            line-height: 0;
+            height: 30rem;
+            transition: margin-left .5s ease-in-out;
+        }
+
+        .slide{
+            height: 100%;
+            width: 25%;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        #overflow{
+            width: 100%;
+            overflow: hidden;
+        }
+
+    }
+
+    #slide1:checked ~ #slides .inner{
+        margin-left: 0;
+    }
+    #slide2:checked ~ #slides .inner{
+        margin-left: -100%;
+    }
+    #slide3:checked ~ #slides .inner{
+        margin-left: -200%;
+    }
+    #slide4:checked ~ #slides .inner{
+        margin-left: -300%;
+    }
+
+    #controls {
+        margin: -300px 0 0 0;
+        width: 100%;
+        height: 5rem;
+        z-index: 3;
+        position: relative;
+
+     }
+     #controls label {
+        transition: opacity 0.2s ease-out;
+        display: none;
+        width: 3rem;
+        height: 3rem;
+        opacity: .4;
+        z-index: 10;
+        border-radius: 50%;
+        background-color: grey;
+        box-shadow: inset 0 0 2rem color(gray);
+        border-radius: 50%;
+        padding: 1rem;
+        
+     }
+     #controls label:hover {
+        opacity: 1;
+     }
+     #slide1:checked ~ #controls label:nth-child(2),
+     #slide2:checked ~ #controls label:nth-child(3),
+     #slide3:checked ~ #controls label:nth-child(4),
+     #slide4:checked ~ #controls label:nth-child(1) {
+        background: url(https://www.flaticon.com/svg/static/icons/svg/545/545682.svg) no-repeat;
+        float:right;
+        margin: -5rem 0 0 0;
+        display: block;
+     }
+     #slide1:checked ~ #controls label:nth-last-child(1),
+     #slide2:checked ~ #controls label:nth-last-child(4),
+     #slide3:checked ~ #controls label:nth-last-child(3),
+     #slide4:checked ~ #controls label:nth-last-child(2) {
+        background: url(https://www.flaticon.com/svg/static/icons/svg/545/545680.svg) no-repeat;
+        float:right;
+        margin: -5rem 4rem 0 0;
+        display: block;
+     }
+     
+
+     .slider-caption{
+         line-height: 8rem;
+         font-size: size(xl);
+         font-weight: 700;
+     }
+
+    .slide{
+        display: flex;
+        flex-wrap: wrap;
+
+        .card-wrapper{
+            height: 25rem;
+            width: 15rem;
+
+            *{
+                cursor: pointer;
+            }
+
+            .food-img{
+                height: 15rem;
+                width: 15rem;
+                border-radius: 50%;
+                overflow: hidden;
+                display: block;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+
+            }
+
+            .food-name{
+                display: block;
+                font-size: size(sm);
+                font-weight: 400;
+                margin-top: 3rem;
+                p{
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+}
+
+.download-uber-eats-app{
+    height: 15rem;
+    width: 100%;
+
+    .uber-eats-logo-wrapper{
+        grid-area: logo;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    p{
+        grid-area: text;
+        font-size: size(lg);
+        font-weight: 700;
+        letter-spacing: .1rem;
+    }
+    .download-buttons{
+        grid-area: button;
+        height: 100%;
+        width: 100%;
+
+        .download-button{
+            height: 4rem;
+            width: 12rem;
+            background-color: color(gray);
+            border-radius: 5rem;
+            outline: none;
+            border: none;
+            font-size: size(sm);
+            margin-right: .5rem;
+            img{
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+        }
+    }
+}
+
+.local-food{
+    width: 100%;
+    border-top: .2rem solid color(gray);
+    padding-top: 2rem;
+    input[type = "radio"]{
+        display: none;
+    }
+
+    .local-food-caption{
+        font-size: size(xl);
+        font-weight: 700;
+    }
+
+    @include controlSet;
+    @include slide-set;
+
+    .page-1-button:checked ~ .slides .inner{
+        margin-left: 0;
+    }
+
+    .page-2-button:checked ~ .slides .inner{
+        margin-left: -100%;
+    }
+}
+
+.register{
+    height: 40rem;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .card-wrapper{
+        height: 100%;
+        width: calc(40rem + 3.5vw);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        *{
+            cursor: pointer;
+        }
+
+        .card-img{
+            height: 25rem;
+            min-width: 25rem;
+            width: calc(30rem + 11vw);
+            max-width: 45rem;
+            overflow: hidden;
+            display: block;
+
+
+            img{
+                height: 25rem;
+                width: 100%;
+            }
+        }
+
+        .service-name{
+            font-size: size(md);
+            font-weight: 600;
+            margin-top: 2rem;
+        }
+
+        .register-action{
+            font-size: size(sm);
+            font-weight: 600;
+            color: color(black);
+            text-decoration: underline;
+        }
+    }
+
+    .card-wrapper:nth-child(2){
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+.new-on-uber{
+    width: 100%;
+    border-top: .2rem solid color(gray);
+    padding-top: 2rem;
+    input[type = "radio"]{
+        display: none;
+    }
+
+    .new-on-uber-caption{
+        font-size: size(xl);
+        font-weight: 700;
+    }
+
+    @include controlSet;
+    @include slide-set;
+
+    .new-on-uber-page-1-button:checked ~ .slides .inner{
+        margin-left: 0;
+    }
+
+    .new-on-uber-page-2-button:checked ~ .slides .inner{
+        margin-left: -100%;
+    }
+}
+
+.cities-near-me{
+    height: 40rem;
+    width: 100%;
+    margin-top: 2rem;
+    border-top: .2rem solid color(gray);
+    .cities-near-me-header{
+        display: flex;
+        align-items: center;
+
+        .cities-near-me-caption{
+            width: 75%;
+            font-size: size(xl);
+            font-weight: 700;
+        }
+
+        .more-cities{
+            width: 25%;
+            font-size: size(sm);
+            font-weight: 700;
+            text-decoration: underline;
+            cursor: pointer;
+            text-align: right;
+        }
+    }
+
+    .cities{
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        flex-grow: 0;
+
+        a{
+            width: 25%;
+            color: color(black);
+            text-decoration: none;
+            font-size: size(sm);
+            margin-top: 2rem;
+        }
+    }
+}
+
+.pizza-in-seattle{
+    width: 100%;
+    border-top: .2rem solid color(gray);
+    padding-top: 2rem;
+    input[type = "radio"]{
+        display: none;
+    }
+
+    .pizza-in-seattle-caption{
+        font-size: size(xl);
+        font-weight: 700;
+    }
+
+    @include controlSet;
+    @include slide-set;
+
+    .pizza-in-seattle-page-1-button:checked ~ .slides .inner{
+        margin-left: 0;
+    }
+
+    .pizza-in-seattle-page-2-button:checked ~ .slides .inner{
+        margin-left: -100%;
+    }
+}
+
+.fast-food-in-seattle{
+    width: 100%;
+    border-top: .2rem solid color(gray);
+    padding-top: 2rem;
+    input[type = "radio"]{
+        display: none;
+    }
+
+    .fast-food-in-seattle-caption{
+        font-size: size(xl);
+        font-weight: 700;
+    }
+
+    @include controlSet;
+    @include slide-set;
+
+    .fast-food-in-seattle-page-1-button:checked ~ .slides .inner{
+        margin-left: 0;
+    }
+
+    .fast-food-in-seattle-page-2-button:checked ~ .slides .inner{
+        margin-left: -100%;
+    }
+}
+
+.countries-with-uber-eats{
+    height: 40rem;
+    width: 100%;
+    margin-top: 2rem;
+    border-top: .2rem solid color(gray);
+    .countries-with-uber-eats-header{
+        display: flex;
+        align-items: center;
+
+        .countries-with-uber-eats-caption{
+            width: 100%;
+            font-size: size(xl);
+            font-weight: 700;
+        }
+    }
+
+    .countries{
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        flex-grow: 0;
+
+        a{
+            width: 25%;
+            color: color(black);
+            text-decoration: none;
+            font-size: size(sm);
+            margin-top: 2rem;
+        }
+    }
+}
+
+.footer{
+    height: 70vh;
+    max-height: 70rem;
+    color: color(white);
+    background-color: color(black);
+
+    
+    .upper{
+        height: 70%;
+        width: 100%;
+        display: flex;
+        margin-top: 5rem;
+        position: relative;
+        
+
+        .uber-eats-footer{
+            flex-basis: 50%;
+
+            .logo{
+                font-size: size(xl);
+                font-weight: 800;
+    
+                span:nth-child(2){
+                    color: color(green);
+                }
+            }
+
+            .download-app{
+                height: 4rem;
+                width: 30rem;
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                .app-store,
+                .google-play{
+                    flex-basis: 48%;
+                    width: 100%;
+                    height: 100%;
+
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        border: .1rem solid color(white);
+                        border-radius: .5rem;
+                    }
+                }
+                
+            }
+        }
+        .about,
+        .get-help{
+            flex-basis: 25%;
+            font-size: size(sm);
+        }
+
+        .about-header,
+        .get-help-header{
+            margin-bottom: 2rem;
+        }
+
+        .about-uber-eats,
+        .get-help-action{
+            display: flex;
+            flex-direction: column;
+
+            a{
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .lower{
+        border-top: .1rem solid color(white);
+        display: flex;
+        flex-wrap: wrap;
+        font-size: size(xs);
+
+        *{
+            margin-top: 2rem;
+        }
+
+        .social-media{
+            flex-basis: 70%;
+            font-size: size(md);
+            *{
+                margin-right: 1rem;
+            }
+        }
+        .other{
+            flex-basis: 30%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .clone{
+            flex-basis: 100%;
+            text-align: right;
+            margin-bottom: 10rem;
+        }
+    }
+}

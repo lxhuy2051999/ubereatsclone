@@ -1,0 +1,271 @@
+@import "mixins";
+@import "varaiable";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    @include gridSet;
+    grid-template-columns: minmax(5rem, .5fr) repeat(12, minmax(min-content, 1fr)) minmax(5rem, .5fr);
+    grid-template-rows: repeat(12, min-content);
+}
+
+.header{
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: minmax(5rem, .5fr) repeat(12, minmax(min-content, 1fr)) minmax(5rem, .5fr);
+    grid-template-rows: 8rem;
+    align-items: center;
+
+    .column-menu-icon{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .logo{
+        grid-column: 3/6;
+        grid-row: 1/2;
+    }
+
+    .sign-in-nav{
+        grid-column: 13/14;
+        grid-row: 1/2;
+    }
+
+    
+}
+
+.page-cover{
+    display: grid;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    align-items: center;
+    grid-template-columns: inherit;
+
+    .food-finding-form{
+        grid-column: 2/10;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(min-content, 1fr)) minmax(min-content,1.5fr) minmax(min-content, 1.2fr);
+        grid-template-rows: min-content 5rem min-content;
+
+        .invitation{
+            grid-row: 1/2;
+            grid-column: 1/-1;
+        }
+
+        .address-input-wrapper{
+            grid-row: 2/3;
+            grid-column: 1/6;
+        }
+
+        .time-delivery-select-wrapper{
+            grid-row: 2/3;
+            grid-column: 6/8;
+
+
+            
+            .custom-arrow{
+                display: grid;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .find-food-button{
+            grid-row: 2/3;
+            grid-column: 8/9;
+        }
+
+        .invite-sign-in{
+            grid-row: 3/4;
+            grid-column: 1/-1;
+        }
+    }
+
+    .schedule-delivery-form{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+#food-near-me-slider{
+    grid-column: 2/-2;
+    grid-row: 2/3;
+    
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+
+    .slider-caption{
+        grid-row: 1/2;
+    }
+
+    #control{
+        grid-row: 1/2;
+        grid-column: -2/-1;
+    }
+
+    #slides{
+        grid-row: 2/3;
+    }
+}
+
+.download-uber-eats-app{
+    grid-column: 6/11;
+    grid-row: 3/4;
+    
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    grid-template-rows: repeat(2,min-content);
+    grid-template-areas: "logo text"
+    "logo button";
+}
+
+.local-food{
+    grid-row: 4/5;
+    grid-column: 2/-2;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(10, 1fr);
+
+    .local-food-caption,
+    .controls{
+        grid-row: 1/2;
+    }
+
+    .local-food-caption{
+        grid-column: 1/5;
+    }
+
+    .controls{
+        grid-column: -2/-1;
+    }
+    .slides{
+        grid-row: 2/-1;
+        grid-column: 1/-1;
+    }
+}
+
+.register{
+    grid-column: 2/-2;
+    grid-row: 5/6;
+}
+
+.new-on-uber{
+    grid-row: 6/7;
+    grid-column: 2/-2;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(10, 1fr);
+
+    .new-on-uber-caption,
+    .controls{
+        grid-row: 1/2;
+    }
+
+    .new-on-uber-caption{
+        grid-column: 1/5;
+    }
+
+    .controls{
+        grid-column: -2/-1;
+    }
+    .slides{
+        grid-row: 2/-1;
+        grid-column: 1/-1;
+    }
+}
+
+.cities-near-me{
+    grid-row: 7/8;
+    grid-column: 2/-2;
+}
+
+.pizza-in-seattle{
+    grid-row: 8/9;
+    grid-column: 2/-2;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(10, 1fr);
+
+    .pizza-in-seattle-caption,
+    .controls{
+        grid-row: 1/2;
+    }
+
+    .pizza-in-seattle-caption{
+        grid-column: 1/5;
+    }
+
+    .controls{
+        grid-column: -2/-1;
+    }
+    .slides{
+        grid-row: 2/-1;
+        grid-column: 1/-1;
+    }
+}
+
+.fast-food-in-seattle{
+    grid-row: 9/10;
+    grid-column: 2/-2;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(10, 1fr);
+
+    .fast-food-in-seattle-caption,
+    .controls{
+        grid-row: 1/2;
+    }
+
+    .fast-food-in-seattle-caption{
+        grid-column: 1/5;
+    }
+
+    .controls{
+        grid-column: -2/-1;
+    }
+    .slides{
+        grid-row: 2/-1;
+        grid-column: 1/-1;
+    }
+}
+
+.countries-with-uber-eats{
+    grid-row: 10/11;
+    grid-column: 2/-2;
+
+}
+
+.footer{
+    grid-row: 11/12;
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: minmax(5rem, .5fr) repeat(12, minmax(min-content, 1fr)) minmax(5rem, .5fr);
+    grid-row: repeat(3, min-content);
+
+    .upper{
+        grid-row: 1/2;
+        grid-column: 2/-2;
+        
+    }
+    .lower{
+        grid-row: 2/3;
+        grid-column: 2/-2;
+    }
+}

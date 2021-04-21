@@ -1,0 +1,133 @@
+@mixin gridSet {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin slide-set{
+    .slides{
+        width: 100%;
+        height: 40rem;
+        margin-top: 2rem;
+
+        .overflow{
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+
+            .inner{
+                height: 100%;
+                width: 200%;
+                transition: all .5s ease-in-out;
+
+                .page{
+                    height: 100%;
+                    width: 50%;
+                    float: left;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .card-wrapper{
+                        height: 100%;
+                        min-width: 25rem;
+                        width: calc(30rem + 11vw);
+                        max-width: 45rem;
+                        display: block;
+                        flex-direction: column;
+                        align-items: center;
+                        position: relative;
+
+                        *{
+                            cursor: pointer;
+                        }
+    
+                        .card-img{
+                            height: 25rem;
+                            width: 100%;
+                            overflow: hidden;
+                            display: block;
+    
+    
+                            img{
+                                height: 25rem;
+                                width: 100%;
+                            }
+                        }
+
+                        .name{
+                            font-size: size(sm);
+                            font-weight: 600;
+                            margin-top: 2rem;
+                        }
+
+                        .price{
+                            font-size: size(xs);
+                            margin-bottom: 2rem;
+                        }
+
+                        .rate{
+                            height: 4rem;
+                            width: 4rem;
+                            text-align: center;
+                            line-height: 4rem;
+                            font-size: size(xs);
+                            color: color(green);
+                            background: color(lightGreen);
+                            border-radius: 50%;
+                            position: absolute;
+                            right: 0;
+                            bottom: 9rem;
+                        }
+
+                        .tags{
+                            font-size: size(xs);
+                            border-top: .2rem solid color(gray);
+                            letter-spacing: .1rem;
+                            opacity: .6;
+                        }
+
+                        .discount{
+                            white-space: nowrap;
+                            padding: .5rem 1rem;
+                            font-size: size(xs);
+                            background-color: color(green);
+                            color: color(white);
+                            position: absolute;
+                            right: 0;
+                            top: 1rem;
+                        }
+                    }
+
+                    .card-wrapper:nth-child(2){
+                        margin-left: 1rem;
+                        margin-right: 1rem;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
+
+@mixin controlSet {
+    .controls{
+        justify-self: right;
+        align-self: center;
+        img{
+            height: 4rem;
+            width: 4rem;
+            margin-left: 1rem;
+            opacity: .5;
+            cursor: pointer;
+            box-shadow: inset 0 0 2rem color(gray);
+            border-radius: 50%;
+            padding: 1rem;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}

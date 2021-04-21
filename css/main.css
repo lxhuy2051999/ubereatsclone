@@ -1,0 +1,1123 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap");
+body {
+  position: relative; }
+
+button {
+  cursor: pointer; }
+
+input, select, button {
+  border-radius: .2rem; }
+
+* {
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover; }
+
+.header {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 8rem;
+  top: 0px;
+  z-index: 100; }
+  .header .logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    white-space: nowrap; }
+    .header .logo-text span:nth-child(2) {
+      color: #06C167; }
+  .header .sign-in-nav {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-self: right;
+    height: 4rem;
+    width: 70%;
+    border-radius: 3rem;
+    display: grid;
+    align-items: center;
+    justify-content: center; }
+    .header .sign-in-nav .sign-in-link {
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 18px;
+      color: #0b0e0f;
+      white-space: nowrap; }
+  .header .column-menu-icon {
+    cursor: pointer; }
+    .header .column-menu-icon span {
+      display: block;
+      height: .2rem;
+      width: 2rem;
+      background-color: black;
+      margin: .5rem;
+      transform-origin: left;
+      transition: all .25s ease-in-out .1s; }
+  .header .column-menu {
+    position: absolute;
+    top: 8rem;
+    left: calc(-20rem - 10vw);
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    height: 100vh;
+    width: calc(20rem + 5vw);
+    z-index: 10;
+    transition: all .5s ease-in-out;
+    z-index: 10; }
+    .header .column-menu .sign-in-button {
+      margin: 2rem;
+      height: 4rem;
+      background-color: #0b0e0f;
+      border: none;
+      color: #ffffff;
+      font-size: 18px; }
+    .header .column-menu .nav-link-list {
+      margin: 2rem;
+      margin-top: calc(2rem + 20vh);
+      list-style: none;
+      font-size: 14px; }
+      .header .column-menu .nav-link-list .nav-link {
+        margin-top: 1.5rem;
+        cursor: pointer; }
+    .header .column-menu .menu-intro {
+      margin: 2rem;
+      display: flex;
+      align-items: center; }
+      .header .column-menu .menu-intro .uber-eats-img {
+        height: 5rem;
+        width: 5rem;
+        border: 0.2rem solid #0b0e0f; }
+      .header .column-menu .menu-intro p {
+        margin-left: 2rem;
+        font-size: 14px; }
+    .header .column-menu .download-button-wrapper {
+      margin: 2rem;
+      height: 3rem;
+      width: 100%; }
+      .header .column-menu .download-button-wrapper .download-button {
+        border-radius: 2rem;
+        height: 4rem;
+        width: 10rem;
+        border: none;
+        margin-right: .5rem;
+        outline: none; }
+        .header .column-menu .download-button-wrapper .download-button .download-img {
+          height: 1.5rem;
+          width: 1.5rem; }
+  .header .column-menu-checkbox:checked ~ .column-menu {
+    left: 0%; }
+  .header .column-menu-checkbox:checked ~ .column-menu-icon span:nth-child(1) {
+    transform: rotateZ(45deg); }
+  .header .column-menu-checkbox:checked ~ .column-menu-icon span:nth-child(2) {
+    opacity: 0; }
+  .header .column-menu-checkbox:checked ~ .column-menu-icon span:nth-child(3) {
+    transform: rotateZ(-45deg); }
+
+.page-cover {
+  height: 70rem;
+  background-color: rgba(240, 180, 68, 0.5);
+  background: rgba(240, 180, 68, 0.5);
+  background-image: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.5)), url(../image/uber-eats-background.jpg);
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 110%; }
+  .page-cover .food-finding-form {
+    color: #ffffff;
+    position: relative; }
+    .page-cover .food-finding-form .invitation {
+      font-size: 48px;
+      margin-bottom: 5rem; }
+      .page-cover .food-finding-form .invitation * {
+        font-style: normal;
+        font-weight: 700; }
+    .page-cover .food-finding-form .address-input-wrapper {
+      position: absolute;
+      display: grid;
+      margin-right: .5rem;
+      z-index: 1;
+      height: 100%;
+      width: calc(100% - 0.5rem); }
+      .page-cover .food-finding-form .address-input-wrapper i {
+        position: absolute;
+        font-size: 18px;
+        color: #0b0e0f;
+        align-self: center;
+        left: 1rem;
+        z-index: 2; }
+      .page-cover .food-finding-form .address-input-wrapper .address-input {
+        width: 100%;
+        height: 100%;
+        padding-left: 5rem;
+        padding-right: 2rem;
+        border: none;
+        border-bottom: 0.1rem solid #0b0e0f;
+        outline: none;
+        border-radius: .2rem;
+        z-index: inherit; }
+    .page-cover .food-finding-form .time-delivery-select-wrapper {
+      margin-right: .5rem;
+      position: relative; }
+      .page-cover .food-finding-form .time-delivery-select-wrapper .custom-select {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        position: relative;
+        color: #0b0e0f;
+        font-size: 18px; }
+        .page-cover .food-finding-form .time-delivery-select-wrapper .custom-select .select {
+          height: 100%;
+          width: 100%;
+          background-color: #ffffff;
+          display: grid;
+          padding-left: 1rem;
+          align-items: center;
+          border-radius: .2rem;
+          display: flex;
+          align-items: center; }
+          .page-cover .food-finding-form .time-delivery-select-wrapper .custom-select .select i {
+            margin-right: 1rem; }
+        .page-cover .food-finding-form .time-delivery-select-wrapper .custom-select .option-group {
+          position: absolute;
+          height: 200%;
+          width: 100%;
+          background-color: #ffffff;
+          z-index: -1;
+          border-radius: .2rem; }
+          .page-cover .food-finding-form .time-delivery-select-wrapper .custom-select .option-group .option {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-weight: 500; }
+            .page-cover .food-finding-form .time-delivery-select-wrapper .custom-select .option-group .option i {
+              padding: .5rem;
+              border-radius: 50%;
+              background-color: #ffffff;
+              margin: .5rem; }
+            .page-cover .food-finding-form .time-delivery-select-wrapper .custom-select .option-group .option:hover {
+              background-color: #EDEDED; }
+      .page-cover .food-finding-form .time-delivery-select-wrapper #custom-select-checkbox:checked ~ .custom-select .option-group {
+        z-index: 1; }
+      .page-cover .food-finding-form .time-delivery-select-wrapper #custom-select-checkbox:checked ~ .custom-select .select,
+      .page-cover .food-finding-form .time-delivery-select-wrapper #custom-select-checkbox:checked ~ .custom-arrow {
+        border-bottom: 0.2rem solid #0b0e0f;
+        height: calc(100% + .2rem); }
+      .page-cover .food-finding-form .time-delivery-select-wrapper .custom-arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 4rem;
+        background-color: #ffffff;
+        pointer-events: none;
+        border-radius: .2rem; }
+        .page-cover .food-finding-form .time-delivery-select-wrapper .custom-arrow i {
+          color: #0b0e0f;
+          font-size: 14px; }
+    .page-cover .food-finding-form .find-food-button {
+      border: none;
+      outline: none;
+      font-weight: 500;
+      background-color: #0b0e0f;
+      color: #ffffff;
+      font-size: 18px; }
+      .page-cover .food-finding-form .find-food-button:hover {
+        background-color: #1A1A1A; }
+  .page-cover .invite-sign-in {
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 2rem;
+    font-weight: 600; }
+    .page-cover .invite-sign-in a {
+      color: #ffffff; }
+
+#food-near-me-slider {
+  width: 100%; }
+  #food-near-me-slider input[type="radio"] {
+    display: none; }
+  #food-near-me-slider label {
+    cursor: pointer;
+    text-decoration: none; }
+  #food-near-me-slider #slides {
+    position: relative;
+    z-index: 1; }
+    #food-near-me-slider #slides .inner {
+      width: 400%;
+      line-height: 0;
+      height: 30rem;
+      transition: margin-left .5s ease-in-out; }
+    #food-near-me-slider #slides .slide {
+      height: 100%;
+      width: 25%;
+      float: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    #food-near-me-slider #slides #overflow {
+      width: 100%;
+      overflow: hidden; }
+  #food-near-me-slider #slide1:checked ~ #slides .inner {
+    margin-left: 0; }
+  #food-near-me-slider #slide2:checked ~ #slides .inner {
+    margin-left: -100%; }
+  #food-near-me-slider #slide3:checked ~ #slides .inner {
+    margin-left: -200%; }
+  #food-near-me-slider #slide4:checked ~ #slides .inner {
+    margin-left: -300%; }
+  #food-near-me-slider #controls {
+    margin: -300px 0 0 0;
+    width: 100%;
+    height: 5rem;
+    z-index: 3;
+    position: relative; }
+  #food-near-me-slider #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    opacity: .4;
+    z-index: 10;
+    border-radius: 50%;
+    background-color: grey;
+    box-shadow: inset 0 0 2rem #EDEDED;
+    border-radius: 50%;
+    padding: 1rem; }
+  #food-near-me-slider #controls label:hover {
+    opacity: 1; }
+  #food-near-me-slider #slide1:checked ~ #controls label:nth-child(2),
+  #food-near-me-slider #slide2:checked ~ #controls label:nth-child(3),
+  #food-near-me-slider #slide3:checked ~ #controls label:nth-child(4),
+  #food-near-me-slider #slide4:checked ~ #controls label:nth-child(1) {
+    background: url(https://www.flaticon.com/svg/static/icons/svg/545/545682.svg) no-repeat;
+    float: right;
+    margin: -5rem 0 0 0;
+    display: block; }
+  #food-near-me-slider #slide1:checked ~ #controls label:nth-last-child(1),
+  #food-near-me-slider #slide2:checked ~ #controls label:nth-last-child(4),
+  #food-near-me-slider #slide3:checked ~ #controls label:nth-last-child(3),
+  #food-near-me-slider #slide4:checked ~ #controls label:nth-last-child(2) {
+    background: url(https://www.flaticon.com/svg/static/icons/svg/545/545680.svg) no-repeat;
+    float: right;
+    margin: -5rem 4rem 0 0;
+    display: block; }
+  #food-near-me-slider .slider-caption {
+    line-height: 8rem;
+    font-size: 36px;
+    font-weight: 700; }
+  #food-near-me-slider .slide {
+    display: flex;
+    flex-wrap: wrap; }
+    #food-near-me-slider .slide .card-wrapper {
+      height: 25rem;
+      width: 15rem; }
+      #food-near-me-slider .slide .card-wrapper * {
+        cursor: pointer; }
+      #food-near-me-slider .slide .card-wrapper .food-img {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+        overflow: hidden;
+        display: block; }
+        #food-near-me-slider .slide .card-wrapper .food-img img {
+          height: 100%;
+          width: 100%; }
+      #food-near-me-slider .slide .card-wrapper .food-name {
+        display: block;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 3rem; }
+        #food-near-me-slider .slide .card-wrapper .food-name p {
+          text-align: center; }
+
+.download-uber-eats-app {
+  height: 15rem;
+  width: 100%; }
+  .download-uber-eats-app .uber-eats-logo-wrapper {
+    grid-area: logo;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 1rem;
+    overflow: hidden; }
+    .download-uber-eats-app .uber-eats-logo-wrapper img {
+      height: 100%;
+      width: 100%; }
+  .download-uber-eats-app p {
+    grid-area: text;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: .1rem; }
+  .download-uber-eats-app .download-buttons {
+    grid-area: button;
+    height: 100%;
+    width: 100%; }
+    .download-uber-eats-app .download-buttons .download-button {
+      height: 4rem;
+      width: 12rem;
+      background-color: #EDEDED;
+      border-radius: 5rem;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      margin-right: .5rem; }
+      .download-uber-eats-app .download-buttons .download-button img {
+        height: 1.5rem;
+        width: 1.5rem; }
+
+.local-food {
+  width: 100%;
+  border-top: 0.2rem solid #EDEDED;
+  padding-top: 2rem; }
+  .local-food input[type="radio"] {
+    display: none; }
+  .local-food .local-food-caption {
+    font-size: 36px;
+    font-weight: 700; }
+  .local-food .controls {
+    justify-self: right;
+    align-self: center; }
+    .local-food .controls img {
+      height: 4rem;
+      width: 4rem;
+      margin-left: 1rem;
+      opacity: .5;
+      cursor: pointer;
+      box-shadow: inset 0 0 2rem #EDEDED;
+      border-radius: 50%;
+      padding: 1rem; }
+      .local-food .controls img:hover {
+        opacity: 1; }
+  .local-food .slides {
+    width: 100%;
+    height: 40rem;
+    margin-top: 2rem; }
+    .local-food .slides .overflow {
+      overflow: hidden;
+      height: 100%;
+      width: 100%; }
+      .local-food .slides .overflow .inner {
+        height: 100%;
+        width: 200%;
+        transition: all .5s ease-in-out; }
+        .local-food .slides .overflow .inner .page {
+          height: 100%;
+          width: 50%;
+          float: left;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .local-food .slides .overflow .inner .page .card-wrapper {
+            height: 100%;
+            min-width: 25rem;
+            width: calc(30rem + 11vw);
+            max-width: 45rem;
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            position: relative; }
+            .local-food .slides .overflow .inner .page .card-wrapper * {
+              cursor: pointer; }
+            .local-food .slides .overflow .inner .page .card-wrapper .card-img {
+              height: 25rem;
+              width: 100%;
+              overflow: hidden;
+              display: block; }
+              .local-food .slides .overflow .inner .page .card-wrapper .card-img img {
+                height: 25rem;
+                width: 100%; }
+            .local-food .slides .overflow .inner .page .card-wrapper .name {
+              font-size: 18px;
+              font-weight: 600;
+              margin-top: 2rem; }
+            .local-food .slides .overflow .inner .page .card-wrapper .price {
+              font-size: 14px;
+              margin-bottom: 2rem; }
+            .local-food .slides .overflow .inner .page .card-wrapper .rate {
+              height: 4rem;
+              width: 4rem;
+              text-align: center;
+              line-height: 4rem;
+              font-size: 14px;
+              color: #06C167;
+              background: #E6F2ED;
+              border-radius: 50%;
+              position: absolute;
+              right: 0;
+              bottom: 9rem; }
+            .local-food .slides .overflow .inner .page .card-wrapper .tags {
+              font-size: 14px;
+              border-top: 0.2rem solid #EDEDED;
+              letter-spacing: .1rem;
+              opacity: .6; }
+            .local-food .slides .overflow .inner .page .card-wrapper .discount {
+              white-space: nowrap;
+              padding: .5rem 1rem;
+              font-size: 14px;
+              background-color: #06C167;
+              color: #ffffff;
+              position: absolute;
+              right: 0;
+              top: 1rem; }
+          .local-food .slides .overflow .inner .page .card-wrapper:nth-child(2) {
+            margin-left: 1rem;
+            margin-right: 1rem; }
+  .local-food .page-1-button:checked ~ .slides .inner {
+    margin-left: 0; }
+  .local-food .page-2-button:checked ~ .slides .inner {
+    margin-left: -100%; }
+
+.register {
+  height: 40rem;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .register .card-wrapper {
+    height: 100%;
+    width: calc(40rem + 3.5vw);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .register .card-wrapper * {
+      cursor: pointer; }
+    .register .card-wrapper .card-img {
+      height: 25rem;
+      min-width: 25rem;
+      width: calc(30rem + 11vw);
+      max-width: 45rem;
+      overflow: hidden;
+      display: block; }
+      .register .card-wrapper .card-img img {
+        height: 25rem;
+        width: 100%; }
+    .register .card-wrapper .service-name {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 2rem; }
+    .register .card-wrapper .register-action {
+      font-size: 18px;
+      font-weight: 600;
+      color: #0b0e0f;
+      text-decoration: underline; }
+  .register .card-wrapper:nth-child(2) {
+    margin-left: 1rem;
+    margin-right: 1rem; }
+
+.new-on-uber {
+  width: 100%;
+  border-top: 0.2rem solid #EDEDED;
+  padding-top: 2rem; }
+  .new-on-uber input[type="radio"] {
+    display: none; }
+  .new-on-uber .new-on-uber-caption {
+    font-size: 36px;
+    font-weight: 700; }
+  .new-on-uber .controls {
+    justify-self: right;
+    align-self: center; }
+    .new-on-uber .controls img {
+      height: 4rem;
+      width: 4rem;
+      margin-left: 1rem;
+      opacity: .5;
+      cursor: pointer;
+      box-shadow: inset 0 0 2rem #EDEDED;
+      border-radius: 50%;
+      padding: 1rem; }
+      .new-on-uber .controls img:hover {
+        opacity: 1; }
+  .new-on-uber .slides {
+    width: 100%;
+    height: 40rem;
+    margin-top: 2rem; }
+    .new-on-uber .slides .overflow {
+      overflow: hidden;
+      height: 100%;
+      width: 100%; }
+      .new-on-uber .slides .overflow .inner {
+        height: 100%;
+        width: 200%;
+        transition: all .5s ease-in-out; }
+        .new-on-uber .slides .overflow .inner .page {
+          height: 100%;
+          width: 50%;
+          float: left;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .new-on-uber .slides .overflow .inner .page .card-wrapper {
+            height: 100%;
+            min-width: 25rem;
+            width: calc(30rem + 11vw);
+            max-width: 45rem;
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            position: relative; }
+            .new-on-uber .slides .overflow .inner .page .card-wrapper * {
+              cursor: pointer; }
+            .new-on-uber .slides .overflow .inner .page .card-wrapper .card-img {
+              height: 25rem;
+              width: 100%;
+              overflow: hidden;
+              display: block; }
+              .new-on-uber .slides .overflow .inner .page .card-wrapper .card-img img {
+                height: 25rem;
+                width: 100%; }
+            .new-on-uber .slides .overflow .inner .page .card-wrapper .name {
+              font-size: 18px;
+              font-weight: 600;
+              margin-top: 2rem; }
+            .new-on-uber .slides .overflow .inner .page .card-wrapper .price {
+              font-size: 14px;
+              margin-bottom: 2rem; }
+            .new-on-uber .slides .overflow .inner .page .card-wrapper .rate {
+              height: 4rem;
+              width: 4rem;
+              text-align: center;
+              line-height: 4rem;
+              font-size: 14px;
+              color: #06C167;
+              background: #E6F2ED;
+              border-radius: 50%;
+              position: absolute;
+              right: 0;
+              bottom: 9rem; }
+            .new-on-uber .slides .overflow .inner .page .card-wrapper .tags {
+              font-size: 14px;
+              border-top: 0.2rem solid #EDEDED;
+              letter-spacing: .1rem;
+              opacity: .6; }
+            .new-on-uber .slides .overflow .inner .page .card-wrapper .discount {
+              white-space: nowrap;
+              padding: .5rem 1rem;
+              font-size: 14px;
+              background-color: #06C167;
+              color: #ffffff;
+              position: absolute;
+              right: 0;
+              top: 1rem; }
+          .new-on-uber .slides .overflow .inner .page .card-wrapper:nth-child(2) {
+            margin-left: 1rem;
+            margin-right: 1rem; }
+  .new-on-uber .new-on-uber-page-1-button:checked ~ .slides .inner {
+    margin-left: 0; }
+  .new-on-uber .new-on-uber-page-2-button:checked ~ .slides .inner {
+    margin-left: -100%; }
+
+.cities-near-me {
+  height: 40rem;
+  width: 100%;
+  margin-top: 2rem;
+  border-top: 0.2rem solid #EDEDED; }
+  .cities-near-me .cities-near-me-header {
+    display: flex;
+    align-items: center; }
+    .cities-near-me .cities-near-me-header .cities-near-me-caption {
+      width: 75%;
+      font-size: 36px;
+      font-weight: 700; }
+    .cities-near-me .cities-near-me-header .more-cities {
+      width: 25%;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: pointer;
+      text-align: right; }
+  .cities-near-me .cities {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 0; }
+    .cities-near-me .cities a {
+      width: 25%;
+      color: #0b0e0f;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 2rem; }
+
+.pizza-in-seattle {
+  width: 100%;
+  border-top: 0.2rem solid #EDEDED;
+  padding-top: 2rem; }
+  .pizza-in-seattle input[type="radio"] {
+    display: none; }
+  .pizza-in-seattle .pizza-in-seattle-caption {
+    font-size: 36px;
+    font-weight: 700; }
+  .pizza-in-seattle .controls {
+    justify-self: right;
+    align-self: center; }
+    .pizza-in-seattle .controls img {
+      height: 4rem;
+      width: 4rem;
+      margin-left: 1rem;
+      opacity: .5;
+      cursor: pointer;
+      box-shadow: inset 0 0 2rem #EDEDED;
+      border-radius: 50%;
+      padding: 1rem; }
+      .pizza-in-seattle .controls img:hover {
+        opacity: 1; }
+  .pizza-in-seattle .slides {
+    width: 100%;
+    height: 40rem;
+    margin-top: 2rem; }
+    .pizza-in-seattle .slides .overflow {
+      overflow: hidden;
+      height: 100%;
+      width: 100%; }
+      .pizza-in-seattle .slides .overflow .inner {
+        height: 100%;
+        width: 200%;
+        transition: all .5s ease-in-out; }
+        .pizza-in-seattle .slides .overflow .inner .page {
+          height: 100%;
+          width: 50%;
+          float: left;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .pizza-in-seattle .slides .overflow .inner .page .card-wrapper {
+            height: 100%;
+            min-width: 25rem;
+            width: calc(30rem + 11vw);
+            max-width: 45rem;
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            position: relative; }
+            .pizza-in-seattle .slides .overflow .inner .page .card-wrapper * {
+              cursor: pointer; }
+            .pizza-in-seattle .slides .overflow .inner .page .card-wrapper .card-img {
+              height: 25rem;
+              width: 100%;
+              overflow: hidden;
+              display: block; }
+              .pizza-in-seattle .slides .overflow .inner .page .card-wrapper .card-img img {
+                height: 25rem;
+                width: 100%; }
+            .pizza-in-seattle .slides .overflow .inner .page .card-wrapper .name {
+              font-size: 18px;
+              font-weight: 600;
+              margin-top: 2rem; }
+            .pizza-in-seattle .slides .overflow .inner .page .card-wrapper .price {
+              font-size: 14px;
+              margin-bottom: 2rem; }
+            .pizza-in-seattle .slides .overflow .inner .page .card-wrapper .rate {
+              height: 4rem;
+              width: 4rem;
+              text-align: center;
+              line-height: 4rem;
+              font-size: 14px;
+              color: #06C167;
+              background: #E6F2ED;
+              border-radius: 50%;
+              position: absolute;
+              right: 0;
+              bottom: 9rem; }
+            .pizza-in-seattle .slides .overflow .inner .page .card-wrapper .tags {
+              font-size: 14px;
+              border-top: 0.2rem solid #EDEDED;
+              letter-spacing: .1rem;
+              opacity: .6; }
+            .pizza-in-seattle .slides .overflow .inner .page .card-wrapper .discount {
+              white-space: nowrap;
+              padding: .5rem 1rem;
+              font-size: 14px;
+              background-color: #06C167;
+              color: #ffffff;
+              position: absolute;
+              right: 0;
+              top: 1rem; }
+          .pizza-in-seattle .slides .overflow .inner .page .card-wrapper:nth-child(2) {
+            margin-left: 1rem;
+            margin-right: 1rem; }
+  .pizza-in-seattle .pizza-in-seattle-page-1-button:checked ~ .slides .inner {
+    margin-left: 0; }
+  .pizza-in-seattle .pizza-in-seattle-page-2-button:checked ~ .slides .inner {
+    margin-left: -100%; }
+
+.fast-food-in-seattle {
+  width: 100%;
+  border-top: 0.2rem solid #EDEDED;
+  padding-top: 2rem; }
+  .fast-food-in-seattle input[type="radio"] {
+    display: none; }
+  .fast-food-in-seattle .fast-food-in-seattle-caption {
+    font-size: 36px;
+    font-weight: 700; }
+  .fast-food-in-seattle .controls {
+    justify-self: right;
+    align-self: center; }
+    .fast-food-in-seattle .controls img {
+      height: 4rem;
+      width: 4rem;
+      margin-left: 1rem;
+      opacity: .5;
+      cursor: pointer;
+      box-shadow: inset 0 0 2rem #EDEDED;
+      border-radius: 50%;
+      padding: 1rem; }
+      .fast-food-in-seattle .controls img:hover {
+        opacity: 1; }
+  .fast-food-in-seattle .slides {
+    width: 100%;
+    height: 40rem;
+    margin-top: 2rem; }
+    .fast-food-in-seattle .slides .overflow {
+      overflow: hidden;
+      height: 100%;
+      width: 100%; }
+      .fast-food-in-seattle .slides .overflow .inner {
+        height: 100%;
+        width: 200%;
+        transition: all .5s ease-in-out; }
+        .fast-food-in-seattle .slides .overflow .inner .page {
+          height: 100%;
+          width: 50%;
+          float: left;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .fast-food-in-seattle .slides .overflow .inner .page .card-wrapper {
+            height: 100%;
+            min-width: 25rem;
+            width: calc(30rem + 11vw);
+            max-width: 45rem;
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            position: relative; }
+            .fast-food-in-seattle .slides .overflow .inner .page .card-wrapper * {
+              cursor: pointer; }
+            .fast-food-in-seattle .slides .overflow .inner .page .card-wrapper .card-img {
+              height: 25rem;
+              width: 100%;
+              overflow: hidden;
+              display: block; }
+              .fast-food-in-seattle .slides .overflow .inner .page .card-wrapper .card-img img {
+                height: 25rem;
+                width: 100%; }
+            .fast-food-in-seattle .slides .overflow .inner .page .card-wrapper .name {
+              font-size: 18px;
+              font-weight: 600;
+              margin-top: 2rem; }
+            .fast-food-in-seattle .slides .overflow .inner .page .card-wrapper .price {
+              font-size: 14px;
+              margin-bottom: 2rem; }
+            .fast-food-in-seattle .slides .overflow .inner .page .card-wrapper .rate {
+              height: 4rem;
+              width: 4rem;
+              text-align: center;
+              line-height: 4rem;
+              font-size: 14px;
+              color: #06C167;
+              background: #E6F2ED;
+              border-radius: 50%;
+              position: absolute;
+              right: 0;
+              bottom: 9rem; }
+            .fast-food-in-seattle .slides .overflow .inner .page .card-wrapper .tags {
+              font-size: 14px;
+              border-top: 0.2rem solid #EDEDED;
+              letter-spacing: .1rem;
+              opacity: .6; }
+            .fast-food-in-seattle .slides .overflow .inner .page .card-wrapper .discount {
+              white-space: nowrap;
+              padding: .5rem 1rem;
+              font-size: 14px;
+              background-color: #06C167;
+              color: #ffffff;
+              position: absolute;
+              right: 0;
+              top: 1rem; }
+          .fast-food-in-seattle .slides .overflow .inner .page .card-wrapper:nth-child(2) {
+            margin-left: 1rem;
+            margin-right: 1rem; }
+  .fast-food-in-seattle .fast-food-in-seattle-page-1-button:checked ~ .slides .inner {
+    margin-left: 0; }
+  .fast-food-in-seattle .fast-food-in-seattle-page-2-button:checked ~ .slides .inner {
+    margin-left: -100%; }
+
+.countries-with-uber-eats {
+  height: 40rem;
+  width: 100%;
+  margin-top: 2rem;
+  border-top: 0.2rem solid #EDEDED; }
+  .countries-with-uber-eats .countries-with-uber-eats-header {
+    display: flex;
+    align-items: center; }
+    .countries-with-uber-eats .countries-with-uber-eats-header .countries-with-uber-eats-caption {
+      width: 100%;
+      font-size: 36px;
+      font-weight: 700; }
+  .countries-with-uber-eats .countries {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 0; }
+    .countries-with-uber-eats .countries a {
+      width: 25%;
+      color: #0b0e0f;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 2rem; }
+
+.footer {
+  height: 70vh;
+  max-height: 70rem;
+  color: #ffffff;
+  background-color: #0b0e0f; }
+  .footer .upper {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    margin-top: 5rem;
+    position: relative; }
+    .footer .upper .uber-eats-footer {
+      flex-basis: 50%; }
+      .footer .upper .uber-eats-footer .logo {
+        font-size: 36px;
+        font-weight: 800; }
+        .footer .upper .uber-eats-footer .logo span:nth-child(2) {
+          color: #06C167; }
+      .footer .upper .uber-eats-footer .download-app {
+        height: 4rem;
+        width: 30rem;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 0;
+        bottom: 0; }
+        .footer .upper .uber-eats-footer .download-app .app-store,
+        .footer .upper .uber-eats-footer .download-app .google-play {
+          flex-basis: 48%;
+          width: 100%;
+          height: 100%; }
+          .footer .upper .uber-eats-footer .download-app .app-store img,
+          .footer .upper .uber-eats-footer .download-app .google-play img {
+            height: 100%;
+            width: 100%;
+            border: 0.1rem solid #ffffff;
+            border-radius: .5rem; }
+    .footer .upper .about,
+    .footer .upper .get-help {
+      flex-basis: 25%;
+      font-size: 18px; }
+    .footer .upper .about-header,
+    .footer .upper .get-help-header {
+      margin-bottom: 2rem; }
+    .footer .upper .about-uber-eats,
+    .footer .upper .get-help-action {
+      display: flex;
+      flex-direction: column; }
+      .footer .upper .about-uber-eats a,
+      .footer .upper .get-help-action a {
+        margin-top: 1rem; }
+  .footer .lower {
+    border-top: 0.1rem solid #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px; }
+    .footer .lower * {
+      margin-top: 2rem; }
+    .footer .lower .social-media {
+      flex-basis: 70%;
+      font-size: 24px; }
+      .footer .lower .social-media * {
+        margin-right: 1rem; }
+    .footer .lower .other {
+      flex-basis: 30%;
+      display: flex;
+      justify-content: space-between; }
+    .footer .lower .clone {
+      flex-basis: 100%;
+      text-align: right;
+      margin-bottom: 10rem; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Nunito', sans-serif; }
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: minmax(5rem, 0.5fr) repeat(12, minmax(min-content, 1fr)) minmax(5rem, 0.5fr);
+  grid-template-rows: repeat(12, min-content); }
+
+.header {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: minmax(5rem, 0.5fr) repeat(12, minmax(min-content, 1fr)) minmax(5rem, 0.5fr);
+  grid-template-rows: 8rem;
+  align-items: center; }
+  .header .column-menu-icon {
+    grid-column: 2/3;
+    grid-row: 1/2; }
+  .header .logo {
+    grid-column: 3/6;
+    grid-row: 1/2; }
+  .header .sign-in-nav {
+    grid-column: 13/14;
+    grid-row: 1/2; }
+
+.page-cover {
+  display: grid;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  align-items: center;
+  grid-template-columns: inherit; }
+  .page-cover .food-finding-form {
+    grid-column: 2/10;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(min-content, 1fr)) minmax(min-content, 1.5fr) minmax(min-content, 1.2fr);
+    grid-template-rows: min-content 5rem min-content; }
+    .page-cover .food-finding-form .invitation {
+      grid-row: 1/2;
+      grid-column: 1/-1; }
+    .page-cover .food-finding-form .address-input-wrapper {
+      grid-row: 2/3;
+      grid-column: 1/6; }
+    .page-cover .food-finding-form .time-delivery-select-wrapper {
+      grid-row: 2/3;
+      grid-column: 6/8; }
+      .page-cover .food-finding-form .time-delivery-select-wrapper .custom-arrow {
+        display: grid;
+        align-items: center;
+        justify-content: center; }
+    .page-cover .food-finding-form .find-food-button {
+      grid-row: 2/3;
+      grid-column: 8/9; }
+    .page-cover .food-finding-form .invite-sign-in {
+      grid-row: 3/4;
+      grid-column: 1/-1; }
+  .page-cover .schedule-delivery-form {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%); }
+
+#food-near-me-slider {
+  grid-column: 2/-2;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-rows: repeat(2, min-content); }
+  #food-near-me-slider .slider-caption {
+    grid-row: 1/2; }
+  #food-near-me-slider #control {
+    grid-row: 1/2;
+    grid-column: -2/-1; }
+  #food-near-me-slider #slides {
+    grid-row: 2/3; }
+
+.download-uber-eats-app {
+  grid-column: 6/11;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-areas: "logo text" "logo button"; }
+
+.local-food {
+  grid-row: 4/5;
+  grid-column: 2/-2;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(10, 1fr); }
+  .local-food .local-food-caption,
+  .local-food .controls {
+    grid-row: 1/2; }
+  .local-food .local-food-caption {
+    grid-column: 1/5; }
+  .local-food .controls {
+    grid-column: -2/-1; }
+  .local-food .slides {
+    grid-row: 2/-1;
+    grid-column: 1/-1; }
+
+.register {
+  grid-column: 2/-2;
+  grid-row: 5/6; }
+
+.new-on-uber {
+  grid-row: 6/7;
+  grid-column: 2/-2;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(10, 1fr); }
+  .new-on-uber .new-on-uber-caption,
+  .new-on-uber .controls {
+    grid-row: 1/2; }
+  .new-on-uber .new-on-uber-caption {
+    grid-column: 1/5; }
+  .new-on-uber .controls {
+    grid-column: -2/-1; }
+  .new-on-uber .slides {
+    grid-row: 2/-1;
+    grid-column: 1/-1; }
+
+.cities-near-me {
+  grid-row: 7/8;
+  grid-column: 2/-2; }
+
+.pizza-in-seattle {
+  grid-row: 8/9;
+  grid-column: 2/-2;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(10, 1fr); }
+  .pizza-in-seattle .pizza-in-seattle-caption,
+  .pizza-in-seattle .controls {
+    grid-row: 1/2; }
+  .pizza-in-seattle .pizza-in-seattle-caption {
+    grid-column: 1/5; }
+  .pizza-in-seattle .controls {
+    grid-column: -2/-1; }
+  .pizza-in-seattle .slides {
+    grid-row: 2/-1;
+    grid-column: 1/-1; }
+
+.fast-food-in-seattle {
+  grid-row: 9/10;
+  grid-column: 2/-2;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(10, 1fr); }
+  .fast-food-in-seattle .fast-food-in-seattle-caption,
+  .fast-food-in-seattle .controls {
+    grid-row: 1/2; }
+  .fast-food-in-seattle .fast-food-in-seattle-caption {
+    grid-column: 1/5; }
+  .fast-food-in-seattle .controls {
+    grid-column: -2/-1; }
+  .fast-food-in-seattle .slides {
+    grid-row: 2/-1;
+    grid-column: 1/-1; }
+
+.countries-with-uber-eats {
+  grid-row: 10/11;
+  grid-column: 2/-2; }
+
+.footer {
+  grid-row: 11/12;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: minmax(5rem, 0.5fr) repeat(12, minmax(min-content, 1fr)) minmax(5rem, 0.5fr);
+  grid-row: repeat(3, min-content); }
+  .footer .upper {
+    grid-row: 1/2;
+    grid-column: 2/-2; }
+  .footer .lower {
+    grid-row: 2/3;
+    grid-column: 2/-2; }
